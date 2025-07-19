@@ -1,0 +1,116 @@
+{
+  "active": false,
+  "connections": {
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Groq Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-07-19T05:48:50.017Z",
+  "id": "cDNTbfX6uWna7WAN",
+  "isArchived": false,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "My workflow 2",
+  "nodes": [
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "f87c3f49-591b-40af-a605-6239d02285ac",
+      "name": "When chat message received",
+      "webhookId": "68567ae7-01f6-47a1-97f1-07a9f6a31874"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.1,
+      "position": [
+        208,
+        0
+      ],
+      "id": "ff1876f6-9121-407f-be9f-ca111a66e81f",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGroq",
+      "typeVersion": 1,
+      "position": [
+        160,
+        224
+      ],
+      "id": "6e26979e-d00b-4dab-8c22-dd2112ad5ce1",
+      "name": "Groq Chat Model",
+      "credentials": {
+        "groqApi": {
+          "id": "j5UsUm4yE3hxfjmL",
+          "name": "Divya's Account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        352,
+        224
+      ],
+      "id": "c2e07edd-8c84-4e26-951e-cfcf205f5563",
+      "name": "Simple Memory"
+    }
+  ],
+  "pinData": {},
+  "repo_name": "n8n.prasadsawant.com-backup",
+  "repo_owner": "PrasadRSawant",
+  "repo_path": "https://github.com/PrasadRSawant/n8n.prasadsawant.com-backup",
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-07-19T05:49:12.000Z",
+  "versionId": "aaaa6a76-b540-41b1-8b3d-622ef03ec002"
+}
